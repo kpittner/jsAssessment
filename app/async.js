@@ -22,4 +22,4 @@ manipulateRemoteData : function(url) {
 
   return deferred.promise();
 }
-},
+};
