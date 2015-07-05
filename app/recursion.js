@@ -64,10 +64,49 @@ exports.recursionAnswers = {
   },
 
   fibonacci: function(n) {
-
+    var a = 0, b = 1, total = 1;
+    for(var i = 2; i <= n; i++) {
+        total = a + b;
+        a = b;
+        b = total;
+    }
+    return total;
   },
 
   validParentheses: function(n) {
+    var numStrings = n.length;
 
+    for (var i = 0; i < numStrings; i++){
+      alert(n[i]);
+
+
+
+    }
   }
+
+
+
+
+  //   var stack = [];
+  //   var validStack = [];
+  //   var i, char, pos;
+  //
+  //   for (i = 0; char = n[i]; i++) {
+  //     pos = parentheses.indexOf(char);
+  //
+  //     if (pos === -1) {
+  //       continue;
+  //     }
+  //
+  //     if (pos % 2 === 0) {
+  //       stack.push(pos + 1)
+  //     } else {
+  //       if (stack.pop() !== pos) {
+  //         return false;
+  //       }
+  //     }
+  //   }
+  //
+  //   return stack;
+  // }
 };
